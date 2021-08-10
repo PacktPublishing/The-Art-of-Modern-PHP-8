@@ -1,0 +1,35 @@
+name: PHP QA
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  qa:
+    name: Run PHPQA and Commit Changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest Ref
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+          tools: composer:v2
+          coverage: xdebug
+
+      - name: Install dependencies with Composer
+        uses: ramsey/composer-install@v1
+
+      - name: Run CI process
+        run: bash ./ci.bash
+
+      - name: Commit and changes, eg cs fixer
+        uses: EndBug/add-and-commit@v7

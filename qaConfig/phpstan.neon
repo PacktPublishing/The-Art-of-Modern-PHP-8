@@ -1,0 +1,70 @@
+parameters:
+    level: max
+    inferPrivatePropertyTypeFromConstructor: true
+    #TODO remove this once completed refactoring
+    reportUnmatchedIgnoredErrors: false
+    excludePaths:
+        - ./../src/Part2/Chapter6/CoContra/InvalidClass.php
+        - ./../src/Part4/Chapter10/MyFirstProject/vendor/*
+    ignoreErrors:
+        # Part 1
+        -
+            message: '#dynamicProperty#'
+            path: ./../src/Part1/Chapter1
+
+        -
+            message: '#substr expects#'
+            path: ./../src/Part1/Chapter3
+
+        # Part 2
+        -
+            message: '#array_values#'
+            path: ./../src/Part2/*/class_parents.php
+        -
+            message: '#always evaluate to #'
+            path: ./../src/Part2/*/*
+        -
+            message: '#empty\(\) is not allowed#'
+            path: ./../src/Part2/*/*
+        -
+            message: '#Only booleans are allowed in a ternary operator#'
+            path: ./../src/Part2/*/Truthy/TruthDumper.php
+        -
+            message: '#Cannot cast#'
+            path: ./../src/Part2/*/type_juggling.php
+        -
+            message: '#.*#'
+            path: ./../src/Part2/*/type_declarations.php
+        -
+            message: '#Binary#'
+            path: ./../src/Part2/*/string_maths.php
+        -
+            message: '#always true#'
+            path: ./../src/Part2/*/TypeDeclarations/YeOldeDefensive.php
+        -
+            message: '#uninitialised has no typehint specified#'
+            path: ./../src/Part2/*/uninitialised.php
+        -
+            message: '#.*#'
+            path: ./../src/Part2/*/void.php
+
+        # Part 3
+        -
+            message: '#Cannot cast tidy to string#'
+            path: ./../src/Part3/*/ToyMVC/View/TemplateRenderer.php
+        -
+            message: '#Variable \$templateData might not be defined#'
+            path: ./../src/Part3/*/ToyMVC/View/Template/*
+        -
+            message: '#getServiceClassString\(\) should return class-string but returns string#'
+            path: ./../src/Part3/*/ToyDI/ServiceFactory.php
+        -
+            message: '#tCanGetMathsService\(\) should return .+? but returns array<int, object>#'
+            path: ./../tests/Small/Part3/*/ToyDI/ContainerTest.php
+        -
+            message: '#Parameter \#2 \$className of method .+?getSimpleDefinition\(\) expects class-string, string#'
+            path: ./../src/Part3/*/ToyDI/ContainerFactory.php
+        # Part 4
+        -
+            message: '#spl_autoload_register#'
+            path: ./../src/Part4/Chapter10/bespokeAutoloader.php

@@ -1,0 +1,38 @@
+{
+  "name": "yourname/hello-world",
+  "description": "A hello world package",
+  "keywords": [
+    "hello world"
+  ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Joseph Edmonds",
+      "email": "info@ltscommerce.dev"
+    }
+  ],
+  "require": {
+    "php": ">= 8.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "YourName\\HelloWorld\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "YourName\\HelloWorld\\Test\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "^9.5"
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "bin-dir": "bin"
+  },
+  "bin": [
+    "bin/hello"
+  ]
+}
