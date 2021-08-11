@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Handle the fact that you may be executing this from your own package,
+ * or as an installed dependency
+ */
+$autoloaderPath = (static function (): string {
+    foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php'] as $file) {
+        if (file_exists($file)) {
+            return $file;
+        }
+    }
+    throw new \RuntimeException('Failed finding composer autoloader');
+})();
+
+/** Load the found autoloader */
+require $autoloaderPath;
+
+/**  Parse CLI args */
+$args = new \YourName\HelloWorld\Cli\Args($argv);
+
+/** Create language based on language code args */
+$language = new \YourName\HelloWorld\Language($args->getLanguageCode());
+
+/** Create message provider with configured language */
+$messageProvider = new \YourName\HelloWorld\MessageProvider($language);
+
+/** Create output instance and use to send output */
+$output = new \YourName\HelloWorld\Cli\CliOutput();
+$output->sendOutput($messageProvider);

@@ -1,5 +1,5 @@
-.idea
+/.idea
 /vendor/
-bin/
-var/
-.phpunit.result.cache
+/bin/
+/var/
+/.phpunit.result.cache
