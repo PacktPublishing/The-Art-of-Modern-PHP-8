@@ -52,7 +52,7 @@ final class ServiceFactory
     {
         if (
             \array_key_exists(
-                key:   $className,
+                key: $className,
                 array: $this->classNamesToInstances
             )
         ) {
@@ -64,9 +64,9 @@ final class ServiceFactory
     /**
      * @param class-string $className
      *
-     * @return array<int,object>
      * @throws ReflectionException
      *
+     * @return array<int,object>
      */
     private function getDependencyInstances(string $className): array
     {

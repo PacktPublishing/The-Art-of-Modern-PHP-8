@@ -6,6 +6,7 @@ parameters:
     excludePaths:
         - ./../src/Part2/Chapter6/CoContra/InvalidClass.php
         - ./../src/Part4/Chapter10/MyFirstProject/vendor/*
+        - ./../src/Part4/Chapter12
     ignoreErrors:
         # Part 1
         -

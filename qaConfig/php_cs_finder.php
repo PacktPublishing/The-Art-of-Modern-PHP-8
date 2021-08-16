@@ -13,6 +13,7 @@ const NOT_PATHS = [
     'Part2/Chapter5/object_comparison.php',
     'Part3/Chapter7/early_return.php',
     'Part3/Chapter9/ToyDI/SimpleServiceDefinition.php',
+    'Part4/Chapter12/',
 ];
 return PhpCsFixer\Finder::create()
                         ->in([__DIR__ . '/../src', __DIR__ . '/../tests'])

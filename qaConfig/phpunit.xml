@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" colors="true" verbose="true"
+         timeoutForLargeTests="300" timeoutForMediumTests="5" timeoutForSmallTests="1" failOnRisky="true"
+         cacheResult="true" cacheResultFile="../var/qa/.phpunit.result.cache"
+         executionOrder="depends,random">
+    <coverage>
+        <include>
+            <directory suffix=".php">../src</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">../src/Part4/Chapter12</directory>
+        </exclude>
+        <report>
+            <clover outputFile="../var/qa/phpunit_logs/coverage.clover"/>
+            <html outputDirectory="../var/qa/phpunit_coverage"/>
+            <text outputFile="php://stdout"/>
+            <xml outputDirectory="../var/qa/phpunit_logs/coverage-xml"/>
+        </report>
+    </coverage>
+    <logging>
+        <junit outputFile="../var/qa/phpunit_logs/phpunit.junit.xml"/>
+    </logging>
+    <testsuites>
+        <testsuite name="tests">
+            <directory suffix="Test.php">../tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

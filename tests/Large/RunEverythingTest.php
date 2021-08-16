@@ -21,6 +21,9 @@ use SplFileInfo;
  */
 final class RunEverythingTest extends TestCase
 {
+    public const SKIP_PATHS     = [
+        'src/Part4/Chapter12',
+    ];
     private const DISABLE_XDEBUG = ' unset XDEBUG_SESSION ';
     private const REDIRECT_ERR   = ' 2>&1 ';
     private const SUCCESS_CODE   = 0;
@@ -88,22 +91,26 @@ final class RunEverythingTest extends TestCase
      */
     private function filesToRunIterator(): Generator
     {
-        $iterator =
-            new class(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/../../src/'))) extends FilterIterator {
-                private const ACCEPT_REGEXP = '%src/(?<part>[^/]+)/(?<chapter>[^/]+)/(?<file>[^/]+)\.php%';
+        $iterator                       = new class(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/../../src/'))) extends FilterIterator {
+            private const ACCEPT_REGEXP = '%src/(?<part>[^/]+)/(?<chapter>[^/]+)/(?<file>[^/]+)\.php%';
 
-                public function accept(): bool
-                {
-                    /** @var SplFileInfo $current */
-                    $current = $this->current();
-                    $path    = (string)$current->getRealPath();
-                    if (\str_contains($path, '/vendor/')) {
+            public function accept(): bool
+            {
+                /** @var SplFileInfo $current */
+                $current = $this->current();
+                $path    = (string)$current->getRealPath();
+                if (\str_contains($path, '/vendor/')) {
+                    return false;
+                }
+                foreach (RunEverythingTest::SKIP_PATHS as $skip) {
+                    if (\str_contains($path, $skip)) {
                         return false;
                     }
-
-                    return \preg_match(self::ACCEPT_REGEXP, $path) === 1;
                 }
-            };
+
+                return \preg_match(self::ACCEPT_REGEXP, $path) === 1;
+            }
+        };
         foreach ($iterator as $file) {
             /* @var SplFileInfo $file */
             yield $file->getBasename() => [$file];
