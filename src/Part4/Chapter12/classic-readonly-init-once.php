@@ -6,7 +6,7 @@ namespace Book\Part4\Chapter12;
 
 use Book\Part4\Chapter12\ReadOnly\ClassicImmutableInitOnceNullable;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 $dto = new ClassicImmutableInitOnceNullable();
 $dto->setFoo(null);

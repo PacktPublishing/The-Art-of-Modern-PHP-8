@@ -8,7 +8,7 @@ use Book\Part4\Chapter12\FinalConst\ChildClass;
 use Book\Part4\Chapter12\FinalConst\ConstInterface;
 use Book\Part4\Chapter12\FinalConst\ParentClass;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 /**
  * Constants are accessible down the inheritance chain like any other class property. The visibility is controlled with

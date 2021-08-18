@@ -8,7 +8,7 @@ use Book\Part4\Chapter12\IntersectionType\HelloInterface;
 use Book\Part4\Chapter12\IntersectionType\WorldInterface;
 use Book\Part4\Chapter12\IntersectionType\IntersectionPhp81;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 /**
  * Instead, with an Intersection Type, we can simply list the interfaces required to be implemented for the given

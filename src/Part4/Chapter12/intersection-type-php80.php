@@ -7,7 +7,7 @@ namespace Book\Part4\Chapter12;
 use Book\Part4\Chapter12\IntersectionType\HelloWorldInterface;
 use Book\Part4\Chapter12\IntersectionType\IntersectionPhp80;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 /**
  * Before intersection types, any scenario where we need multiple interfaces, we have to create a new special interface

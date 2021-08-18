@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Book\Part4\Chapter12;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 use Book\Part4\Chapter12\Enums\BackedEnum;
 use Book\Part4\Chapter12\Enums\BasicEnum;

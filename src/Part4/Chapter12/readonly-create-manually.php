@@ -6,7 +6,7 @@ namespace Book\Part4\Chapter12;
 
 use Book\Part4\Chapter12\ReadOnly\ReadonlyCreateManually;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 $object      = new \stdClass();
 $object->num = 100;

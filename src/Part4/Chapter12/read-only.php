@@ -7,7 +7,7 @@ namespace Book\Part4\Chapter12;
 use Book\Part4\Chapter12\ReadOnly\ClassicImmutable;
 use Book\Part4\Chapter12\ReadOnly\ReadOnlyDTO;
 
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/autoload.php';
 
 $immutable = new ClassicImmutable(1);
 
