@@ -4,7 +4,7 @@
 
 This is the code repository for [The Art of Modern PHP 8](https://www.packtpub.com/product/the-art-of-modern-php-8/9781800566156), published by Packt.
 
-**Your practical and essential guide to getting up to date with PHP 8**
+**Learn how to write modern, performant, and enterprise-ready code with the latest PHP features and practices**
 
 ## What is this book about?
 PHP has come a long way since its introduction. While the language has evolved with PHP 8, there are still a lot of websites running on a version of PHP that is no longer supported. If you are a PHP developer working with legacy PHP systems and wish to discover the tenants of modern PHP, this book is a perfect solution for you.
@@ -64,6 +64,22 @@ With the following software and hardware list you can run all code files present
 
 ## Get to Know the Author
 **Joseph Edmonds**
-has over 15 years of experience working with PHP and building websites for eCommerce using PHP. He is the Director of Long Term Support LTD and Zend Certified Engineer
+is a business owner, developer, and author. He is a Zend Certified
+Engineer, among his other credentials.
+He's been a part of the e-commerce, tech, and PHP development worlds since the dawn of
+the millennium. He witnessed the exploding growth of e-commerce from the early days,
+helping several companies advance and expand their operations. During this time, he has
+had the pleasure of seeing PHP grow from a fairly amateur language, punching way above
+its weight, into a modern and highly performant language for serious enterprise projects.
+Responding to a growing demand for highly specialized PHP development services, he
+launched Edmonds Commerce in 2007. As an
+independent agency, Edmonds Commerce provides highly specialist PHP development
+services to businesses that use open source PHP, and predominantly Magento, as the
+backbone of their online systems, solving even the most complex and unique PHP
+development challenges.
+As a way to offer a high-level, interrelated service to businesses who want to accelerate
+their growth, he started an exciting new venture in 2020. LTS (Long Term Support Ltd.)
+provides expert help in recruitment, training, DevOps and infrastructure, consultancy,
+and development.
 
 
