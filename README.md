@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B16888?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # The Art of Modern PHP 8
 
 <a href="https://www.packtpub.com/product/the-art-of-modern-php-8/9781800566156"><img src="https://static.packt-cdn.com/products/9781800566156/cover/smaller" alt="The Art of Modern PHP 8" height="256px" align="right"></a>
